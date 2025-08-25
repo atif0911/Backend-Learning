@@ -1,0 +1,40 @@
+Server: A non stop running main function that coordinates all methonds(controllers) are server objectss -->DB, Services(payment service, caching, queue).
+Server --> Two ways(industry relevent)
+    1. Http
+    2. Express
+
+--> Node --> Server runtime (like gnu for c/c++)
+--> Express --> Server Wrapper (a prebuilt library to create a http server easily).
+
+Structure of a "Functional Backend-for-Frontend"
+--> Server*
+--> Database*
+--> Models* (Schema of Data to be stored in the db)
+--> Routes* (The endpoints where client/user sends request --> /auth, /get-profile)
+[https://www.google.com/search?q="tiger]
+    --> https: Secure http connected Server(platform)--> [security comes from an SSL, Certificates]
+    https://www.google.com--> localhost
+    /search--> routes
+    ?q="tiger-->queries
+--> Controllers* (Functions or Services executed on calling a route)
+--> Utils (Small Utility functions that can be reused in multiple controllers --> Unique employee id --> Student, TEacher, etc)
+--> Services (Payment service, Message Queueing, etc... --> Make these available to be used in our backend code.)
+    --> [MVC Architecture --> Models, Views(Routes), Controllers]
+
+node+express [Code Structure]:
+    --> Commonjs: Const express = require("Express")
+    --> module: import express from 'express';
+
+* Scaffloding a express node server:
+    S1: npm init
+    S2: npm i express dotenv
+    S3: npm i nodemon -D //-D signifies Dev dependency
+
+Response status code:
+    200- All isss Welll
+    201- Something new has been created
+    400- Bad request[client side error]
+    401- Unauthorised [WhoTF are you?]
+    404- Page(/Route) not found
+    500- Internal Server Error(server side error)
+
