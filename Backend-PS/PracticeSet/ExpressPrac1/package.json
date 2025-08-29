@@ -1,0 +1,15 @@
+{
+  "name": "expressprac1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "AAS",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
