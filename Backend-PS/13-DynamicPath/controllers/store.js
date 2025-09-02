@@ -36,6 +36,16 @@ exports.postFavouriteList= (req, res, next)=>{
     })
 }
 
+exports.postRemoveFromFavourite= (req, res, next)=>{
+    const homeId=req.params.homeId;
+    Favourite.deleteById(homeId,error=>{
+        if(error){
+            console.log("error",error)
+        }
+        res.redirect("/favouriteList")
+    })
+}
+
 exports.getReserve = (req, res, next) => {
     res.render('store/reserve', { pageTitle: 'Reserve Page', currentPage: "Reserve" });
 }

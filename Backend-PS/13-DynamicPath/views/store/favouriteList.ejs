@@ -14,10 +14,9 @@
             <p class="favourite-price">💰 <%= home.pricePerNight %> / night</p>
             <p class="favourite-location">📍 <%= home.location %></p>
             <p class="favourite-rating">⭐ <%= home.rating %></p>
-            <div class="favourite-actions">
-              <button class="btn btn-fav">❤️ Remove Favourite</button>
-              <button class="btn btn-book">Book Now</button>
-            </div>
+            <form class="favourite-actions" action="/favourites/delete/<%= home.id %>" method="POST">
+              <button class="btn btn-fav" type="submit">❤️ Remove Favourite</button>
+            </form>
           </div>
         </li>
       <% }) %>

@@ -14,11 +14,12 @@
                     <p>Location: <%=home.location%></p>
                     <p>Rating: <%=home.rating%></p>
                     <a href="/host/edit-home/<%=home.id%>?editing=true">Edit</a>
-                    <button>Delete</button>
+                    <form action="/host/deleteHome/<%= home.id %>" method="POST">
+                        <button type="submit">Delete</button>
+                    </form>
                 </li>
-            <% })%>
+            <% }) %>
         </ul>
     </main>
-    
 </body>
 </html>
