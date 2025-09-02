@@ -13,7 +13,7 @@
                     <p>Price Per Night: <%=home.pricePerNight%></p>
                     <p>Location: <%=home.location%></p>
                     <p>Rating: <%=home.rating%></p>
-                    <button >Edit</button>
+                    <a href="/host/edit-home/<%=home.id%>?editing=true">Edit</a>
                     <button>Delete</button>
                 </li>
             <% })%>

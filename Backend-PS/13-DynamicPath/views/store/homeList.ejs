@@ -13,8 +13,7 @@
                     <p>Price Per Night: <%=home.pricePerNight%></p>
                     <p>Location: <%=home.location%></p>
                     <p>Rating: <%=home.rating%></p>
-                    <button>Add To Favourite</button>
-                    <button>Book it now</button>
+                    <%- include('../partials/favourite', {home: home}) %>
                     <a href="/homes/<%=home.id%>">Details</a>
                 </li>
             <% })%>

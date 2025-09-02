@@ -1,29 +1,27 @@
 <%- include('../partials/head') %>
-    </head>
+</head>
 
-    <body>
-        <%- include('../partials/navbar') %>
-            <main>
-                <h1>Your favourite List</h1>
-                <ul>
-                    <% registeredHomes.forEach(home=>{%>
-                        <li>
-                            <img src="<%=home.photo%>" alt="Description of image">
-                            <h3>Home Name: <%=home.houseName%>
-                            </h3>
-                            <p>Price Per Night: <%=home.pricePerNight%>
-                            </p>
-                            <p>Location: <%=home.location%>
-                            </p>
-                            <p>Rating: <%=home.rating%>
-                            </p>
-                            <button>Add To Favourite</button>
-                            <button>Book it now</button>
-                        </li>
-                        <% })%>
-                </ul>
-            </main>
-
-    </body>
-
-    </html>
+<body>
+  <%- include('../partials/navbar') %>
+  <main class="favourite-container">
+    <h1 class="favourite-title">Your Favourite List</h1>
+    <ul class="favourite-list">
+      <% favouriteHomes.forEach(home => { %>
+        <li class="favourite-card">
+          <img src="<%= home.photo %>" alt="Description of image" class="favourite-img">
+          <div class="favourite-info">
+            <h3 class="favourite-name"><%= home.houseName %></h3>
+            <p class="favourite-price">💰 <%= home.pricePerNight %> / night</p>
+            <p class="favourite-location">📍 <%= home.location %></p>
+            <p class="favourite-rating">⭐ <%= home.rating %></p>
+            <div class="favourite-actions">
+              <button class="btn btn-fav">❤️ Remove Favourite</button>
+              <button class="btn btn-book">Book Now</button>
+            </div>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</body>
+</html>
