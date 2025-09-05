@@ -1,0 +1,24 @@
+<%- include('../partials/head') %>
+</head>
+<body>
+<%- include('../partials/navbar') %>
+    <main>
+        <h1>Home List</h1>
+        <h2>Available Homes</h2>
+        <ul>
+            <% registeredHomes.forEach(home=>{%>
+                <li>
+                    <img src="<%=home.photo%>" alt="Description of image">
+                    <h3>Home Name: <%=home.houseName%></h3>
+                    <p>Price Per Night: <%=home.pricePerNight%></p>
+                    <p>Location: <%=home.location%></p>
+                    <p>Rating: <%=home.rating%></p>
+                    <%- include('../partials/favourite', {home: home}) %>
+                    <a href="/homes/<%=home.id%>">Details</a>
+                </li>
+            <% })%>
+        </ul>
+    </main>
+    
+</body>
+</html>

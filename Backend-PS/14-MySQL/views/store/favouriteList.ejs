@@ -1,0 +1,26 @@
+<%- include('../partials/head') %>
+</head>
+
+<body>
+  <%- include('../partials/navbar') %>
+  <main class="favourite-container">
+    <h1 class="favourite-title">Your Favourite List</h1>
+    <ul class="favourite-list">
+      <% favouriteHomes.forEach(home => { %>
+        <li class="favourite-card">
+          <img src="<%= home.photo %>" alt="Description of image" class="favourite-img">
+          <div class="favourite-info">
+            <h3 class="favourite-name"><%= home.houseName %></h3>
+            <p class="favourite-price">💰 <%= home.pricePerNight %> / night</p>
+            <p class="favourite-location">📍 <%= home.location %></p>
+            <p class="favourite-rating">⭐ <%= home.rating %></p>
+            <form class="favourite-actions" action="/favourites/delete/<%= home.id %>" method="POST">
+              <button class="btn btn-fav" type="submit">❤️ Remove Favourite</button>
+            </form>
+          </div>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+</body>
+</html>
