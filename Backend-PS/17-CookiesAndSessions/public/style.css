@@ -1,0 +1,377 @@
+/* ========== General Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body {
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+} /* ========== Navbar ========== */
+header {
+  background-color: #ff5a5f; /* Airbnb red */
+  padding: 15px 0;
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #fff;
+}
+header nav ul li form {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+header nav ul li form:hover {
+  color: #fff;
+} /* ========== Main Section ========== */
+main {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+h1 {
+  font-size: 2.5rem;
+  color: #ff5a5f;
+  margin-bottom: 20px;
+}
+h2 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+p {
+  margin-bottom: 15px;
+} /* ========== Buttons & Links ========== */
+a,
+button {
+  display: inline-block;
+  background-color: #ff5a5f;
+  color: #fff;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+a:hover,
+button:hover {
+  background-color: #e14c50;
+} /* ========== Forms (addHome) ========== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+input[type="text"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+input[type="password"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+button[type="submit"] {
+  background-color: #ff5a5f;
+  color: white;
+  font-size: 16px;
+} /* ========== Lists (home page homes) ========== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+li {
+  background: #f7f7f7;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+li h3 {
+  margin-bottom: 8px;
+  color: #333;
+}
+li p {
+  margin: 0;
+  color: #555;
+} /* ========== 404 Page Special Styling ========== */
+main h1 {
+  font-size: 2.2rem;
+}
+main p {
+  font-size: 1.1rem;
+  color: #666;
+} /* ========== Footer (Optional if needed) ========== */
+footer {
+  margin-top: auto;
+  background-color: #ff5a5f;
+  text-align: center;
+  padding: 10px;
+  color: #fff;
+} /* Common image styling */
+img {
+  width: 300px; /* set your preferred width */
+  height: 200px; /* set your preferred height */
+  object-fit: cover; /* ensures the image fills the box without distortion */
+  border-radius: 10px; /* optional: rounded corners */
+  display: block; /* removes extra spacing below images */
+  margin: 10px auto; /* centers images with spacing */
+} /* ---------- General ---------- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+main.home-details {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+}
+.details-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+  color: #ff385c; /* Airbnb red */
+} /* ---------- Card ---------- */
+.home-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+.home-card:hover {
+  transform: scale(1.02);
+} /* ---------- Image ---------- */
+.home-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+} /* ---------- Info ---------- */
+.home-info {
+  padding: 1.5rem;
+}
+.home-name {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+.home-price span {
+  font-weight: bold;
+  color: #ff385c;
+}
+.home-location,
+.home-rating {
+  margin: 0.3rem 0;
+  color: #555;
+} /* ---------- Buttons ---------- */
+.home-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  text-align: center;
+}
+.btn {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.favourite-btn {
+  background: #fff0f3;
+  color: #ff385c;
+  border: 2px solid #ff385c;
+}
+.favourite-btn:hover {
+  background: #ff385c;
+  color: white;
+}
+.book-btn {
+  background: #ff385c;
+  color: white;
+}
+.book-btn:hover {
+  background: #e00045;
+}
+.navbar {
+  display: flex;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  justify-content: center; /* center items */
+  gap: 20px; /* spacing between cards */
+  background-color: #ff5c5c;
+  padding: 20px;
+}
+.nav-item {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 25px;
+  text-align: center;
+  flex: 1 1 150px; /* responsive sizing */
+  max-width: 200px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.nav-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+.nav-link {
+  display: block;
+  background-color: #fb4d08; /* softer orange-red shade */
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 2px 2px;
+  border-radius: 8px;
+  border: none; /* remove thick white border */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.nav-link:hover {
+  background-color: #ff5722; /* deeper shade on hover */
+  transform: scale(1.05); /* subtle pop effect */
+}
+.navbar li {
+  list-style: none; /* removes bullets */
+  margin: 0; /* removes default margin */
+  padding: 0; /* removes default padding */
+  display: flex; /* makes the items horizontal */
+  gap: 15px; /* space between links */
+} /* Favourite Homes Page */
+.favourite-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.favourite-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #2c3e50;
+}
+.favourite-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.favourite-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+}
+.favourite-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.favourite-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.favourite-info {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.favourite-name {
+  font-size: 1.3rem;
+  color: #34495e;
+  margin: 0;
+}
+.favourite-price,
+.favourite-location,
+.favourite-rating {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0.2rem 0;
+}
+.favourite-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn-fav {
+  background: #ff6b6b;
+  color: white;
+}
+.btn-fav:hover {
+  background: #e74c3c;
+}
+.btn-book {
+  background: #3498db;
+  color: white;
+}
+.btn-book:hover {
+  background: #2980b9;
+} /* Responsive */
+@media (max-width: 600px) {
+  .favourite-img {
+    height: 150px;
+  }
+  .favourite-name {
+    font-size: 1.1rem;
+  }
+}

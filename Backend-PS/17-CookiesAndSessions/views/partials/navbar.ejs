@@ -1,0 +1,28 @@
+<header class="navbar-header">
+  <nav>
+    <ul class="navbar">
+      <li><a href="/index" class="nav-link">airbnb</a></li>
+      <% if(isLoggedIn) { %>
+      <li><a href="/" class="nav-link">Home</a></li>
+      <li><a href="/homeList" class="nav-link">Home List</a></li>
+      <li><a href="/host/add-home" class="nav-link">Add Home</a></li>
+      <li><a href="/host/hostHomeList" class="nav-link">Host Home List</a></li>
+      <li><a href="/favouriteList" class="nav-link">Favourites</a></li>
+      <li><a href="/reserve" class="nav-link">Reserve</a></li>
+      <li><a href="/booking" class="nav-link">Booking</a></li>
+      <% } %> <% if(isLoggedIn) { %>
+      <li>
+        <form action="/logout" class="nav-link" method="POST">
+          <button type="submit">Logout</button>
+        </form>
+      </li>
+      <% } else { %>
+      <li>
+        <form action="/login" method="POST">
+          <button type="submit">Login</button>
+        </form>
+      </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>
