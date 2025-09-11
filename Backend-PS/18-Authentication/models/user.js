@@ -21,7 +21,11 @@ const userSchema = mongoose.Schema({
     type: String,
     required: [true, "Password is required"],
     default: "guest",
-  }
+  },
+  favourites: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Home'
+  }],
 });
 
 module.exports = mongoose.model("User", userSchema);
