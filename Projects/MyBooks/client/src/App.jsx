@@ -7,6 +7,7 @@ import Signup from "./components/Signup";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AddBook from "./components/AddBook";
 
 const App = () => {
   return (
@@ -23,6 +24,8 @@ const App = () => {
             </ProtectedRoute>
           }
         ></Route>
+
+        <Route path="/addbook" element={<AddBook />}></Route>
       </Routes>
     </BrowserRouter>
   );
