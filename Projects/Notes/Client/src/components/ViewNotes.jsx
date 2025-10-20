@@ -40,7 +40,7 @@ const ViewNotes = () => {
       PaperName: note?.PaperName,
       Topic: note?.Topic,
       Description: note?.Description,
-      Id: note?._id||note?.Id,
+      Id: note?._id || note?.Id,
     });
     setEditMode(true);
   };
@@ -53,9 +53,9 @@ const ViewNotes = () => {
     }));
   };
 
-  const handleSave = async () => {
+  const handleSave = async (id) => {
     try {
-      const { data } = await notesBaseUrl.put("updatenotes", editForm);
+      const { data } = await notesBaseUrl.put(`updatenotes/${id}`, editForm);
       if (data?.Success) {
         getAllPaperList();
         setSelectedNote(editForm);
